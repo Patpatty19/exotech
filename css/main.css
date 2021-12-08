@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    background-color: #81C7B4;
+}
+
+.header-caret, .desktop-menu-hover, .mobile-button {
+    transition: all .15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header-caret:hover {
+    color: white;
+}
+
+.logo-header {
+    transition: all .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.logo-header:hover {
+    transform: scale(1.05);
+}
+
+.mobile-header-dropdown  {
+    position: absolute;
+}
+
+.desktop-menu-hover:hover {
+    transform: scale(1.05);
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+.mobile-button:hover {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+.carousel-item {
+    -webkit-transition: opacity 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition: opacity 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+}
