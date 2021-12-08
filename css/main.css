@@ -3,6 +3,21 @@
 * {
     font-family: 'Open Sans', sans-serif;
 }
+.text-shadow {
+text-shadow: 0 2px 4px rgba(0,0,0,0.10);
+}
+
+.text-shadow-md {
+text-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.text-shadow-lg {
+text-shadow: 0 15px 30px rgba(0,0,0,0.11), 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.text-shadow-none {
+text-shadow: none;
+}
 
 .header {
     background-color: #81C7B4;
@@ -40,6 +55,35 @@
     font-weight: 700;
 }
 
+#slide-1, #slide-2, #slide-3 {
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+    transition: all .2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    filter: brightness(0.85);
+}
+
+.main-head {
+    -webkit-text-stroke: 1px black;
+}
+
+#slide-1:hover, #slide-2:hover, #slide-3:hover {
+    filter: brightness(1);
+}
+
+
+#slide-1 {
+    background-image: url(https://www.newegg.com/insider/wp-content/uploads/2019/02/inteli5_15.jpg);
+}
+
+#slide-2 {
+    background-image: url(https://www.cnet.com/a/img/iJxo9AIxiXHqVoqm6nGISKtKwPI=/2020/08/18/b7168aea-9f7e-47bb-9f31-4cb8ad92fbc7/lg-note-20-ultra-5g-iphone-11-se-google-pixel-4a-lg-velvet-6133.jpg);
+}
+
+#slide-3 {
+    background-position-y: bottom;
+    background-image: url(https://cdna.pcpartpicker.com/static/forever/images/userbuild/346752.4653ed0d0954071a2f36de5cf3c8352b.1600.jpg);
+}
 
 .carousel-open:checked + .carousel-item {
     position: static;
@@ -69,4 +113,16 @@
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
 #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
     color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+}
+
+.item-button, .item-card {
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .2s;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+}
+
+.item-button:hover {
+    font-weight: 900;
 }
