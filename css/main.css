@@ -55,7 +55,7 @@ text-shadow: none;
     font-weight: 700;
 }
 
-#slide-1, #slide-2, #slide-3, #slide-4 {
+#slide-1, #slide-2, #slide-3, #slide-4, #slide-5, #slide-6, #slide-7, #slide-8, #slide-9, #slide-10{
     object-fit: contain;
     background-size: cover;
     background-position: center;
@@ -67,7 +67,7 @@ text-shadow: none;
     -webkit-text-stroke: 1px black;
 }
 
-#slide-1:hover, #slide-2:hover, #slide-3:hover #slide-4:hover {
+#slide-1:hover, #slide-2:hover, #slide-3:hover, #slide-4:hover, #slide-5:hover, #slide-6:hover, #slide-7:hover, #slide-8:hover, #slide-9:hover, #slide-10:hover{
     filter: brightness(1);
 }
 
@@ -88,7 +88,38 @@ text-shadow: none;
 
 #slide-4 {
     background-position-y: bottom;
-    background-image: url(https://dlcdnwebimgs.asus.com/gain/433D5485-8F36-4194-8B81-CF340994A5DE/fwebp);
+    background-image: url(https://storage-asset.msi.com/global/picture/banner/banner_16352332375e895ee757cdf581b7091309e96a3d4c.jpeg);
+}
+
+#slide-5 {
+    background-position-y: bottom;
+    background-image: url(https://www.asus.com/WebsitesBanner/global/banners/k0peermuthfkb9ik/k0peermuthfkb9ik-0_0_desktop_1X.jpg?webp);
+}
+
+#slide-6 {
+    background-position-y: bottom;
+    background-image: url(https://www.asus.com/WebsitesBanner/global/banners/rsuljrrjgwbvbkz2/rsuljrrjgwbvbkz2-0_0_desktop_1X.jpg?webp);
+}
+
+#slide-7 {
+    background-position-y: bottom;
+    background-image: url(https://www.asus.com/WebsitesBanner/global/banners/vm5yq7mmayfnenyd/vm5yq7mmayfnenyd-0_0_desktop_1X.jpg);
+}
+
+
+#slide-8 {
+    background-position-y: bottom;
+    background-image: url(https://assets2.razerzone.com/images/pnx.assets/dd0c32673320708bb1ca3cbe56938293/razer-kaira-pro-for-playstation-hero-desktop.jpg);
+}
+
+#slide-9 {
+    background-position-y: bottom;
+    background-image: url(https://assets2.razerzone.com/images/pnx.assets/cb2f1985a8862ba17b8a688bcb3bd97b/razer-wolverine-v2-chroma_hero.jpg);
+}
+
+#slide-10 {
+    background-position-y: bottom;
+    background-image: url(https://storage-asset.msi.com/global/picture/banner/banner_16276326399f0ae5349a12b69bf1f7e54a058306be.jpeg);
 }
 
 .carousel-open:checked + .carousel-item {
@@ -102,7 +133,13 @@ text-shadow: none;
 #carousel-1:checked ~ .control-1,
 #carousel-2:checked ~ .control-2,
 #carousel-3:checked ~ .control-3,
-#carousel-4:checked ~ .control-4
+#carousel-4:checked ~ .control-4,
+#carousel-5:checked ~ .control-5,
+#carousel-6:checked ~ .control-6,
+#carousel-7:checked ~ .control-7,
+#carousel-8:checked ~ .control-8,
+#carousel-9:checked ~ .control-9,
+#carousel-10:checked ~ .control-10
  {
     display: block;
 }
@@ -120,7 +157,13 @@ text-shadow: none;
 #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
 #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
-#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet {
+#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+#carousel-5:checked ~ .control-5 ~ .carousel-indicators li:nth-child(5) .carousel-bullet,
+#carousel-6:checked ~ .control-6 ~ .carousel-indicators li:nth-child(6) .carousel-bullet,
+#carousel-7:checked ~ .control-7 ~ .carousel-indicators li:nth-child(7) .carousel-bullet,
+#carousel-8:checked ~ .control-8 ~ .carousel-indicators li:nth-child(8) .carousel-bullet,
+#carousel-9:checked ~ .control-9 ~ .carousel-indicators li:nth-child(9) .carousel-bullet,
+#carousel-10:checked ~ .control-10 ~ .carousel-indicators li:nth-child(10) .carousel-bullet   {
     color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
 }
 
