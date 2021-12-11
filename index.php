@@ -149,7 +149,35 @@
                             <button class="item-button p-px text-sm text-center px-2 font-semibold bg-200-gray">View</button>
                         </div>
                     </div>
-                </div>
+               
+                    <div id="item-card" class="flex item-card flex-col justify-between rounded-lg h-64 w-64 min-h-64 min-w-64 max-h-64 max-w-64 p-4 mx-2 shadow-lg">
+                        <img src="https://cdn.dxomark.com/wp-content/uploads/drafts/post-95995/Apple-iPhone-13-featured-image-packshot-review.jpg" class="w-full flex-grow object-fit">
+                        <p class="font-bold py-1 border-200-gray border-b-2 flex-shrink-0 flex-grow-0">Item Name<p>
+                        <div class="flex flex-row flex-grow justify-between">
+                            <p class="font-semibold text-md">Item Price</p>
+                            <button class="item-button p-px text-sm text-center px-2 font-semibold bg-200-gray">View</button>
+                        </div>
+                    </div>
+
+                    <div id="item-card" class="flex item-card flex-col justify-between rounded-lg h-64 w-64 min-h-64 min-w-64 max-h-64 max-w-64 p-4 mx-2 shadow-lg">
+                        <img src="https://images.samsung.com/is/image/samsung/p6pim/ph/galaxy-s21/gallery/ph-galaxy-s21-ultra-5g-g988-sm-g998bzkgphl-368317461?$720_576_PNG$" class="w-full flex-grow object-fit">
+                        <p class="font-bold py-1 border-200-gray border-b-2 flex-shrink-0 flex-grow-0">Item Name<p>
+                        <div class="flex flex-row flex-grow justify-between">
+                            <p class="font-semibold text-md">Item Price</p>
+                            <button class="item-button p-px text-sm text-center px-2 font-semibold bg-200-gray">View</button>
+                        </div>
+                    </div>
+
+                    <div id="item-card" class="flex item-card flex-col justify-between rounded-lg h-64 w-64 min-h-64 min-w-64 max-h-64 max-w-64 p-4 mx-2 shadow-lg">
+                        <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3090/geforce-rtx-3090-shop-300-t.png" class="w-full flex-grow object-fit">
+                        <p class="font-bold py-1 border-200-gray border-b-2 flex-shrink-0 flex-grow-0">Item Name<p>
+                        <div class="flex flex-row flex-grow justify-between">
+                            <p class="font-semibold text-md">Item Price</p>
+                            <button class="item-button p-px text-sm text-center px-2 font-semibold bg-200-gray">View</button>
+                        </div>
+                    </div>
+
+                </div> 
             </div>
             <div id="main-recently-updated-products" class="flex flex-col py-16 px-2 md:px-24">
                 <p class="text-4xl font-semibold pb-4 pl-2 md:pl-6 text-shadow-lg border-200-gray border-b-4">RECENTLY UPDATED PRODUCTS<p>
