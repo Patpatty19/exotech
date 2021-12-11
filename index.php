@@ -65,7 +65,8 @@
                       <!--Slide 5-->
                       <input class="carousel-open" type="radio" id="carousel-5" name="carousel" aria-hidden="true" hidden="">
                     <div id="slide-5" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
-                        
+                    <p class="text-white stroke-1 font-extrabold text-6xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">HIGH END GAMING COMPUTERS</p>
+                    <p class="text-white stroke-1 font-bold text-xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">SUITABLE FOR VERY SMOOTH GAMING EXPERIENCE</p>  
                     </div>
                     <!--Slide 6-->
                     <input class="carousel-open" type="radio" id="carousel-6" name="carousel" aria-hidden="true" hidden="">
@@ -82,14 +83,16 @@
                       <!--Slide 8-->
                       <input class="carousel-open" type="radio" id="carousel-8" name="carousel" aria-hidden="true" hidden="">
                     <div id="slide-8" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
-                 
+                    <p class="text-white stroke-1 font-extrabold text-6xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text"> PLAYSTATION GAMING CONSOLES </p>
+                    <p class="text-white stroke-1 font-bold text-xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">EXPLORE NEW GENERATION IMMERSIVE GAMES FROM SONY PLAYSTATION</p>  
                     </div>
 
                     
                     <!--Slide 9-->
                     <input class="carousel-open" type="radio" id="carousel-9" name="carousel" aria-hidden="true" hidden="">
                     <div id="slide-9" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
-                        
+                    <p class="text-white stroke-1 font-extrabold text-6xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text"> XBOX GAMING CONSOLES </p>
+                    <p class="text-white stroke-1 font-bold text-xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">NEW GENERATION GAMES AND ENTERTAINMENT OF THE MICROSOFT SERIES </p>  
                     </div>
 
                       <!--Slide 10-->
