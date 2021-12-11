@@ -55,7 +55,7 @@ text-shadow: none;
     font-weight: 700;
 }
 
-#slide-1, #slide-2, #slide-3 {
+#slide-1, #slide-2, #slide-3, #slide-4 {
     object-fit: contain;
     background-size: cover;
     background-position: center;
@@ -67,7 +67,7 @@ text-shadow: none;
     -webkit-text-stroke: 1px black;
 }
 
-#slide-1:hover, #slide-2:hover, #slide-3:hover {
+#slide-1:hover, #slide-2:hover, #slide-3:hover #slide-4:hover {
     filter: brightness(1);
 }
 
@@ -85,6 +85,12 @@ text-shadow: none;
     background-image: url(https://cdna.pcpartpicker.com/static/forever/images/userbuild/346752.4653ed0d0954071a2f36de5cf3c8352b.1600.jpg);
 }
 
+
+#slide-4 {
+    background-position-y: bottom;
+    background-image: url(https://www.asus.com/WebsitesBanner/PH/banners/igavsnctgsttwur1/igavsnctgsttwur1-0_0_desktop_1X.jpg?webp);
+}
+
 .carousel-open:checked + .carousel-item {
     position: static;
     opacity: 100;
@@ -95,7 +101,9 @@ text-shadow: none;
 }
 #carousel-1:checked ~ .control-1,
 #carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4
+ {
     display: block;
 }
 .carousel-indicators {
@@ -111,7 +119,8 @@ text-shadow: none;
 }
 #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet {
     color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
 }
 

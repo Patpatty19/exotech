@@ -56,6 +56,12 @@
                         <p class="text-white stroke-1 font-bold text-xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">WHEN IT'S THERE-IT'S ALWAYS THERE.</p>
                     </div>
 
+                    <!--Slide 4-->
+                    <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
+                    <div id="slide-4" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
+                        
+                    </div>
+
                     <!-- Add additional indicators for each slide-->
                     <ol class="carousel-indicators">
                         <li class="inline-block mr-3">
@@ -67,6 +73,8 @@
                         <li class="inline-block mr-3">
                             <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
                         </li>
+                        <li class="inline-block mr-3">
+                            <label for="carousel-4" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
                     </ol>
                 </div>
             </div>
