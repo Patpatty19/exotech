@@ -122,6 +122,20 @@ text-shadow: none;
     background-image: url(https://storage-asset.msi.com/global/picture/banner/banner_16276326399f0ae5349a12b69bf1f7e54a058306be.jpeg);
 }
 
+.card-button {
+    transition: all .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.card-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.card-view-bg {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .carousel-open:checked + .carousel-item {
     position: static;
     opacity: 100;

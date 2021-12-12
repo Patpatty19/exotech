@@ -1,5 +1,7 @@
 <?php 
+    include 'dbconfig.php';
     include("phpClass/dropdown.php");
+    include("phpClass/card.php");
 
     $dropdown = new Dropdown();
 ?>
@@ -17,14 +19,29 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="js/dropdown-menu.js"></script>
+        <script src="js/card-behavior.js"></script>
     </head>
     <body class="flex flex-col">
+        <div class="flex flex-row justify-center items-center fixed min-h-screen min-w-screen w-screen h-screen card-view-bg invisible">
+            <div class="flex flex-row justify-between card-view h-96 w-max-content bg-white rounded-2xl shadow-lg overflow-hidden">
+                <img src="" class="card-view-img flex-grow bg-black min-w-1/12 w-96 h-full">
+                <div class="flex-grow p-4 bg-400-gray h-full flex justify-between flex-col">
+                    <p class="font-semibold text-2xl text-shadow-lg border-b-2 border-200-gray item-name">Item Name</p>
+                    <p class="flex-grow text-top">Description</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="font-semibold text-lg text-shadow-lg mt-2 self-start mx-2 price"><strong>USD </strong> 0.00</p>
+                        <button class="py-1 px-4 border-2 font-bold border-black rounded-2xl card-button add-to-cart self-end mx-2">Add to Cart</button>
+                        <button class="py-1 px-4 border-2 font-bold border-black rounded-2xl card-button back mx-2">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <header class="z-50">
             <?php 
                 $dropdown->createDropdown();
             ?>
         </header>
-        <main class="flex-grow flex flex-col">  
+        <main class="flex-grow flex flex-col">
             <div class="carousel relative shadow-2xl bg-white w-full">
                 <div class="carousel-inner relative overflow-hidden w-full">
                 <!--Slide 1-->
@@ -130,44 +147,23 @@
             </div>
             <div id="main-top-selling-products" class="flex flex-col py-16 px-2 md:px-24">
                 <p class="text-4xl font-semibold pb-4 pl-2 md:pl-6 text-shadow-lg border-200-gray border-b-4">TRENDING PRODUCTS<p>
-                <div id="container-top-selling-products" class="flex flex-rowmy-2 p-2 min-h-36 max-h-36 w-full space-x-2">
-                    <div id="item-card" class="flex item-card flex-col justify-between rounded-lg h-64 w-64 min-h-64 min-w-64 max-h-64 max-w-64 p-4 mx-2 shadow-lg">
-                        <img src="https://cdn.shopify.com/s/files/1/2227/7667/products/IntelCorei9-12900K_1024x1024.jpg?v=1637264321" class="w-full flex-grow object-fit">
-                        <p class="font-bold py-1 border-200-gray border-b-2 flex-shrink-0 flex-grow-0">Item Name<p>
-                        <div class="flex flex-row flex-grow justify-between">
-                            <p class="font-semibold text-md">Item Price</p>
-                            <button class="item-button p-px text-sm text-center px-2 font-semibold bg-200-gray">View</button>
-                        </div>
-                    </div>
-               
-                    <div id="item-card" class="flex item-card flex-col justify-between rounded-lg h-64 w-64 min-h-64 min-w-64 max-h-64 max-w-64 p-4 mx-2 shadow-lg">
-                        <img src="https://cdn.dxomark.com/wp-content/uploads/drafts/post-95995/Apple-iPhone-13-featured-image-packshot-review.jpg" class="w-full flex-grow object-fit">
-                        <p class="font-bold py-1 border-200-gray border-b-2 flex-shrink-0 flex-grow-0">Item Name<p>
-                        <div class="flex flex-row flex-grow justify-between">
-                            <p class="font-semibold text-md">Item Price</p>
-                            <button class="item-button p-px text-sm text-center px-2 font-semibold bg-200-gray">View</button>
-                        </div>
-                    </div>
+                <div id="container-top-selling-products" class="flex flex-row justify-between my-2 p-2 min-h-36 max-h-36 w-full space-x-2">
+                <?php
+                    $sql = "SELECT * FROM `inventory`";
+                    $result = mysqli_query($conn, $sql);
+                    $count = 5;
+                    $icount = 0;
 
-                    <div id="item-card" class="flex item-card flex-col justify-between rounded-lg h-64 w-64 min-h-64 min-w-64 max-h-64 max-w-64 p-4 mx-2 shadow-lg">
-                        <img src="https://images.samsung.com/is/image/samsung/p6pim/ph/galaxy-s21/gallery/ph-galaxy-s21-ultra-5g-g988-sm-g998bzkgphl-368317461?$720_576_PNG$" class="w-full flex-grow object-fit">
-                        <p class="font-bold py-1 border-200-gray border-b-2 flex-shrink-0 flex-grow-0">Item Name<p>
-                        <div class="flex flex-row flex-grow justify-between">
-                            <p class="font-semibold text-md">Item Price</p>
-                            <button class="item-button p-px text-sm text-center px-2 font-semibold bg-200-gray">View</button>
-                        </div>
-                    </div>
-
-                    <div id="item-card" class="flex item-card flex-col justify-between rounded-lg h-64 w-64 min-h-64 min-w-64 max-h-64 max-w-64 p-4 mx-2 shadow-lg">
-                        <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3090/geforce-rtx-3090-shop-300-t.png" class="w-full flex-grow object-fit">
-                        <p class="font-bold py-1 border-200-gray border-b-2 flex-shrink-0 flex-grow-0">Item Name<p>
-                        <div class="flex flex-row flex-grow justify-between">
-                            <p class="font-semibold text-md">Item Price</p>
-                            <button class="item-button p-px text-sm text-center px-2 font-semibold bg-200-gray">View</button>
-                        </div>
-                    </div>
-
-                </div> 
+                    if (mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)) {
+                            if ($icount >= $count) break;
+                            
+                            $card = new Card($row["Name"], $row["Price"], $row["Product_ID"], "");
+                            $icount++;
+                        }
+                    }
+                ?>
+                </div>
             </div>
             <div id="main-recently-updated-products" class="flex flex-col py-16 px-2 md:px-24">
                 <p class="text-4xl font-semibold pb-4 pl-2 md:pl-6 text-shadow-lg border-200-gray border-b-4">RECENTLY UPDATED PRODUCTS<p>
