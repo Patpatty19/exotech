@@ -42,7 +42,7 @@ if (!$conn) {
                 </div>
             </div>
         </header>
-        <form method="post" id="gen" name="gen">
+        <form method="post" id="gen" name="gen" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <label for="category">Choose a category:</label>
             <select name="category" id="catergory">
                 <option value="All">All</option>
@@ -77,7 +77,7 @@ if (!$conn) {
         ?>
         <div>
             <h1 id="test"><?php echo $row["Name"];?></h1>
-            <form class="form-submit">
+            <form class="form-submit" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <input type="hidden" class="pid" value="<?php $row["Product_ID"]; ?>">
                 <input type="hidden" class="pname" value="<?php $row["Name"]; ?>">
                 <input type="hidden" class="pcategory" value="<?php $row["Category"]; ?>">

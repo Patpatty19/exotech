@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $(document).on('click', '#additem', function(e){
         e.preventDefault();
-        $( ".test" ).append( "<p>Test</p>" );
+        $( "#test" ).first.append( "<p>Test</p>" );
         var form = $(this).closest(".form-submit");
         var id = form.find(".pid").val();
 
