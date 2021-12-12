@@ -10,8 +10,11 @@ $(document).ready(function(){
             method: "post",
             data: {pid:id},
             success: function(response){
-                $(".alert-message").html(response);
+                window.alert(response);
                 window.scrollTo(0,0);
+            },
+            complete: (jq, txt) => {
+                window.alert(txt);
             }
         })
     })

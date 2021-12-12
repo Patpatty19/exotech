@@ -6,8 +6,9 @@ if (isset($_POST['Product_ID']) && isset($_POST['Name']) && isset($_POST['Catego
     $id = $_POST["Product_ID"];
     $qty = 1;
 
-    $insert_stmt=$db -> prepare ("INSERT INTO `cart`(`Product_ID`) VALUES (':id');");
-    $insert_stmt ->bindParam(":id", $id);
-    $insert_stmt -> execute();
+    if ($conn->query("INSERT INTO `cart`('Product_ID') VALUES ('$id');") === TRUE)
+        echo "Success";
+    else
+        echo "No";
 }
 ?>
