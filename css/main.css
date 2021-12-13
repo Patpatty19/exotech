@@ -178,7 +178,7 @@ text-shadow: none;
 #carousel-8:checked ~ .control-8 ~ .carousel-indicators li:nth-child(8) .carousel-bullet,
 #carousel-9:checked ~ .control-9 ~ .carousel-indicators li:nth-child(9) .carousel-bullet,
 #carousel-10:checked ~ .control-10 ~ .carousel-indicators li:nth-child(10) .carousel-bullet   {
-    color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+    color: #2b6cb0;  
 }
 
 .item-button, .item-card {
@@ -191,4 +191,8 @@ text-shadow: none;
 
 .item-button:hover {
     font-weight: 900;
+}
+
+#main-about {
+    background-image: url('res/img/logo.png');
 }
