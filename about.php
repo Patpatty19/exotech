@@ -20,6 +20,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="js/dropdown-menu.js"></script>
         <script src="js/card-behavior.js"></script>
+        <script src="js/carousel-control.js"></script>
     </head>
     <body class="flex flex-col">
         <div class="flex flex-row justify-center items-center fixed min-h-screen min-w-screen w-screen h-screen card-view-bg invisible">
@@ -42,24 +43,22 @@
             ?>
         </header>
 
-        <div id="main-about" class="flex flex-row py-32 px-4 pr-32 md:px-12 bg-aud">
-            <p class="text-4xl font-extrabold pb-4 pl-px md:pl-6 border-b-2 mb-4">Background of Exotech<p>
-            <p class="text-1xl font-semibold pb-4 pl-px md:pl-6">ExoTech is a retail and service type of business that mainly focuses on retailing exotic technologies that are unique and distinct, which is not available in other retailers and stores that also sell tech products. ExoTech also provides building and servicing of personal computers. It is known as a merchandising business, as it is also a provider of hardware technologies from different companies. ExoTech also provides old-gen or out-of-service hardware components. Our services include; off-the-shelf technological components, old computer hardware servicing, providing exotic or enthusiast-class hardware from old to new generational eras. It is also a retailer for second-hand hardware since this is one of our primary sources of generating supply for consumers.<p>
+        <div id="main-about" class="flex flex-row py-64 px-4 pr-32 md:px-12 bg-aud">
+            <p class="text-4xl text-white font-extrabold pb-4 pl-px md:pl-6 border-b-2 mb-4 text-shadow-md">Background of Exotech<p>
+            <p class="text-1xl text-white font-semibold pb-4 pl-px md:pl-6 text-shadow-md">ExoTech is a retail and service type of business that mainly focuses on retailing exotic technologies that are unique and distinct, which is not available in other retailers and stores that also sell tech products. ExoTech also provides building and servicing of personal computers. It is known as a merchandising business, as it is also a provider of hardware technologies from different companies. ExoTech also provides old-gen or out-of-service hardware components. Our services include; off-the-shelf technological components, old computer hardware servicing, providing exotic or enthusiast-class hardware from old to new generational eras. It is also a retailer for second-hand hardware since this is one of our primary sources of generating supply for consumers.<p>
         </div>
 
 
         <main class="flex-grow flex flex-col">
 
-            <div class="carousel relative shadow-2xl bg-white w-full">
+            <div class="carousel relative shadow-2xl bg-white w-full about-carousel border-t-8">
                 <div class="carousel-inner relative overflow-hidden w-full">
-                <!--Slide 1-->
                     <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
                     <div id="slide-1" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
                         <p class="text-white stroke-1 font-extrabold text-6xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">MISSION</p>
                         <p class="text-white stroke-1 font-bold text-xl text-center ml-4 md:ml-0 text-shadow-lg main-head-text">Our mission is to provide consumers with the finest quality of products and services. <br>
                              As well as to bring life to unique technologies not known by everyone.</p>
                     </div>
-                    <!--Slide 2-->
                     <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
                     <div id="slide-2" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
                         <p class="text-white stroke-1 font-extrabold text-6xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">VISION</p>
@@ -67,12 +66,6 @@
                              provider of exotic and unique kinds of technology ranging from old to new generations.</p>
                     </div>
                    
-
-        
-
-                    
-
-                    <!-- Add additional indicators for each slide-->
                     <ol class="carousel-indicators">
                         <li class="inline-block mr-3">
                             <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>

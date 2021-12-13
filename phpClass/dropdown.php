@@ -2,7 +2,7 @@
     class Dropdown {
         public static function createDropdown() {
             echo '
-                <div class="flex flex-row justify-between p-4 sm:px-4 md:px-12 header shadow-lg items-center">
+                <div class="flex flex-row justify-between p-4 sm:px-4 md:px-12 -mt-4 header shadow-lg items-center">
                     <img src="res/img/logo.png" class="h-8 w-auto logo-header object-fit">
                     <a class="sm:px-4 md:px-0 sm:visible md:invisible">
                         <i id="mobile-header-dropdown-button" class="fas fa-caret-down text-2xl text-center header-caret"></i>

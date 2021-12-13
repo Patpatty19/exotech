@@ -7,6 +7,14 @@
 text-shadow: 0 2px 4px rgba(0,0,0,0.10);
 }
 
+.about-carousel {
+    border-color: #669D90;
+}
+
+.card-view-color {
+    border-color: #669D90;
+}
+
 .text-shadow-md {
 text-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
 }
@@ -194,5 +202,6 @@ text-shadow: none;
 }
 
 #main-about {
-    background-image: url('res/img/logo.png');
+    background-image: url(https://cdn.discordapp.com/attachments/917672103883444265/919867037260611634/bg.png);
+    background-position-y: 50%;
 }

@@ -20,6 +20,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="js/dropdown-menu.js"></script>
         <script src="js/card-behavior.js"></script>
+        <script src="js/carousel-control.js"></script>
     </head>
     <body class="flex flex-col">
         <?php 
@@ -164,5 +165,8 @@
         <footer>
 
         </footer>
+        <script>
+            controlCarousel(5000, ".carousel-inner")
+        </script>
     </body>
 </html>
