@@ -10,6 +10,7 @@
                             <a href="index.php"><p class="my-2 border-b-2 border-200-gray mobile-button">Home</p></a>
                             <a href="products.php"><p class="my-2 border-b-2 border-200-gray mobile-button">Products</p></a>
                             <a href="builder.php"><p class="my-2 border-b-2 border-200-gray mobile-button">Builder</p></a>
+                            <a href="about.php"><p class="my-2 border-b-2 border-200-gray mobile-button">About</p></a>
                             <a href="cart.php"><p class="my-2 border-b-2 border-200-gray mobile-button">Cart</p></a>
                         </div>
                     </a>
@@ -17,6 +18,7 @@
                         <a href="index.php"><p class="font-semibold p-4 text-2xl text-white desktop-menu-hover mx-4">HOME</p></a>
                         <a href="products.php"><p class="font-semibold p-4 text-2xl text-white desktop-menu-hover mx-4">PRODUCTS</p></a>
                         <a href="builder.php"><p class="font-semibold p-4 text-2xl text-white desktop-menu-hover mx-4">BUILDER</p></a>
+                        <a href="about.php"><p class="font-semibold p-4 text-2xl text-white desktop-menu-hover mx-4">ABOUT</p></a>
                         <a href="cart.php"><p class="font-semibold p-4 text-2xl text-white desktop-menu-hover mx-4">CART</p></a>
                     </div>
                 </div>';
