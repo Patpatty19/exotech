@@ -15,9 +15,24 @@
 
     class CardView {
         function __construct() {
+            $item = isset($_POST['selected-product']) ? $_POST['selected-product'] : "none";
+            
+            session_start();
+            $conn = mysqli_connect("localhost", "root", "", "exotech");
+
+            if ($item != "none") {
+                $json = json_decode($item, true);
+                $id = $json['id'];
+
+                $conn->query("INSERT INTO `cart`(`Product_ID`) VALUES ($id); ");
+                $_SESSION['postdata'] = $_POST;
+                unset($_POST);
+                header("Location: ".$_SERVER['PHP_SELF']);
+            }
+
             echo '
             <form method="post" class="card-view-color hidden" id="card-view" action="' . $_SERVER["PHP_SELF"] . '">
-                <input type="hidden" id="selected-product" name="selected-product" value="">
+                <input type="hidden" id="selected-product" name="selected-product" value="' .  "" . '">
                 <div class="flex flex-col md:flex-row justify-center items-center fixed min-h-screen min-w-screen w-screen h-screen card-view-bg invisible">
                     <div class="flex flex-col md:flex-row justify-between card-view h-96 w-max-content bg-white rounded-2xl shadow-lg overflow-hidden">
                         <img src="" class="card-view-img flex-grow bg-black min-w-1/12 w-96 h-full object-fit">
