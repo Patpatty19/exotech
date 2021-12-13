@@ -192,3 +192,7 @@ text-shadow: none;
 .item-button:hover {
     font-weight: 900;
 }
+
+#main-about {
+    background-image: url('res/img/logo.png');
+}
