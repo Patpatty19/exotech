@@ -53,14 +53,14 @@
 
             <div class="carousel relative shadow-2xl bg-white w-full about-carousel border-t-8">
                 <div class="carousel-inner relative overflow-hidden w-full">
-                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-                    <div id="slide-1" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
+                    <input class="carousel-open" type="radio" id="carousel-11" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                    <div id="slide-11" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
                         <p class="text-white stroke-1 font-extrabold text-6xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">MISSION</p>
                         <p class="text-white stroke-1 font-bold text-xl text-center ml-4 md:ml-0 text-shadow-lg main-head-text">Our mission is to provide consumers with the finest quality of products and services. <br>
                              As well as to bring life to unique technologies not known by everyone.</p>
                     </div>
-                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                    <div id="slide-2" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
+                    <input class="carousel-open" type="radio" id="carousel-12" name="carousel" aria-hidden="true" hidden="">
+                    <div id="slide-12" class="carousel-item absolute opacity-0 flex flex-col justify-start md:justify-center pt-16 md:pt-0 items-start md:items-center" style="height:48rem; min-height:24rem;">
                         <p class="text-white stroke-1 font-extrabold text-6xl text-left ml-4 md:ml-0 text-shadow-lg main-head-text">VISION</p>
                         <p class="text-white stroke-1 font-bold text-xl text-center ml-4 md:ml-0 text-shadow-lg main-head-text">ExoTech seeks to become the Philippines’ most well-known <br>
                              provider of exotic and unique kinds of technology ranging from old to new generations.</p>
@@ -68,10 +68,10 @@
                    
                     <ol class="carousel-indicators">
                         <li class="inline-block mr-3">
-                            <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                            <label for="carousel-11" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
                         </li>
                         <li class="inline-block mr-3">
-                            <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                            <label for="carousel-12" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
                         </li>
                     </ol>
                 </div>

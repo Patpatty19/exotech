@@ -63,7 +63,7 @@ text-shadow: none;
     font-weight: 700;
 }
 
-#slide-1, #slide-2, #slide-3, #slide-4, #slide-5, #slide-6, #slide-7, #slide-8, #slide-9, #slide-10{
+#slide-1, #slide-2, #slide-3, #slide-4, #slide-5, #slide-6, #slide-7, #slide-8, #slide-9, #slide-10, #slide-11, #slide-12{
     object-fit: contain;
     background-size: cover;
     background-position: center;
@@ -75,7 +75,7 @@ text-shadow: none;
     -webkit-text-stroke: 1px black;
 }
 
-#slide-1:hover, #slide-2:hover, #slide-3:hover, #slide-4:hover, #slide-5:hover, #slide-6:hover, #slide-7:hover, #slide-8:hover, #slide-9:hover, #slide-10:hover{
+#slide-1:hover, #slide-2:hover, #slide-3:hover, #slide-4:hover, #slide-5:hover, #slide-6:hover, #slide-7:hover, #slide-8:hover, #slide-9:hover, #slide-10:hover, #slide-11:hover, #slide-12:hover{
     filter: brightness(1);
 }
 
@@ -130,6 +130,16 @@ text-shadow: none;
     background-image: url(https://storage-asset.msi.com/global/picture/banner/banner_16276326399f0ae5349a12b69bf1f7e54a058306be.jpeg);
 }
 
+#slide-11 {
+    background-position-y: bottom;
+    background-image: url(https://d2vrvpw63099lz.cloudfront.net/remote-customer-service/home-office-setup.jpg);
+}
+
+#slide-12 {
+    background-position-y: bottom;
+    background-image: url(https://www.lawtechnologytoday.org/wp-content/uploads/2016/03/old-new-tech-e1457388915582.jpg);
+}
+
 .card-button {
     transition: all .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
@@ -161,7 +171,9 @@ text-shadow: none;
 #carousel-7:checked ~ .control-7,
 #carousel-8:checked ~ .control-8,
 #carousel-9:checked ~ .control-9,
-#carousel-10:checked ~ .control-10
+#carousel-10:checked ~ .control-10,
+#carousel-11:checked ~ .control-11,
+#carousel-12:checked ~ .control-12
  {
     display: block;
 }
@@ -185,7 +197,10 @@ text-shadow: none;
 #carousel-7:checked ~ .control-7 ~ .carousel-indicators li:nth-child(7) .carousel-bullet,
 #carousel-8:checked ~ .control-8 ~ .carousel-indicators li:nth-child(8) .carousel-bullet,
 #carousel-9:checked ~ .control-9 ~ .carousel-indicators li:nth-child(9) .carousel-bullet,
-#carousel-10:checked ~ .control-10 ~ .carousel-indicators li:nth-child(10) .carousel-bullet   {
+#carousel-10:checked ~ .control-10 ~ .carousel-indicators li:nth-child(10) .carousel-bullet,
+#carousel-11:checked ~ .control-11 ~ .carousel-indicators li:nth-child(11) .carousel-bullet,
+#carousel-12:checked ~ .control-12 ~ .carousel-indicators li:nth-child(12) .carousel-bullet
+   {
     color: #2b6cb0;  
 }
 
