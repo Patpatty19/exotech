@@ -18,8 +18,8 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="js/dropdown-menu.js"></script>
-        <script src="js/card-behavior.js"></script>
+        <script src="js/dropdown-menu.js?v=<?php echo time(); ?>"></script>
+        <script src="js/card-behavior.js?v=<?php echo time(); ?>"></script>
         <script src="js/carousel-control.js"></script>
     </head>
     <body class="flex flex-col">
@@ -135,30 +135,52 @@
                     </ol>
                 </div>
             </div>
-            <div id="main-top-selling-products" class="flex flex-col py-16 px-2 md:px-24">
+            <div id="main-top-selling-products" class="flex flex-col py-16 px-2 md:px-24 h-max-content flex-grow">
                 <p class="text-4xl font-semibold pb-4 pl-2 md:pl-6 text-shadow-lg border-200-gray border-b-4">TRENDING PRODUCTS<p>
-                <div id="container-top-selling-products" class="flex flex-row justify-between my-2 p-2 min-h-36 max-h-36 w-full space-x-2">
+                <div id="container-top-selling-products" class="flex  flex-grow md:flex-row justify-start md:justify-between my-2 p-2 min-h-36 max-h-36 w-full space-x-2">
                 <?php
                     $sql = "SELECT * FROM `inventory`";
+                    $json = json_decode(file_get_contents("products.json"), true);
                     $result = mysqli_query($conn, $sql);
                     $count = 5;
                     $icount = 0;
 
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_assoc($result)) {
-                            if ($icount >= $count) break;
+                            if ($icount > $count) break;
                             
-                            $card = new Card($row["Name"], $row["Price"], $row["Product_ID"], "");
+                            new Card($row["Name"], $row["Price"], $row["Product_ID"], $json[$row["Product_ID"]]);
                             $icount++;
                         }
                     }
                 ?>
                 </div>
             </div>
-            <div id="main-recently-updated-products" class="flex flex-col py-16 px-2 md:px-24">
+            <div id="main-recently-updated-products" class="flex flex-col py-16 px-2 md:px-24 flex-grow">
                 <p class="text-4xl font-semibold pb-4 pl-2 md:pl-6 text-shadow-lg border-200-gray border-b-4">RECENTLY UPDATED PRODUCTS<p>
+                    
+                <div id="container-top-selling-products" class="flex  flex-grow md:flex-row justify-start md:justify-between my-2 p-2 min-h-36 max-h-36 w-full space-x-2">
+                <?php
+                    $sql = "SELECT * FROM `inventory`";
+                    $json = json_decode(file_get_contents("products.json"), true);
+                    $result = mysqli_query($conn, $sql);
+                    $count = 5;
+                    $icount = 0;
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)) {
+                            if ($row["Product_ID"]%4 == 1) {
+                                if ($icount > $count) break;
+                                
+                                new Card($row["Name"], $row["Price"], $row["Product_ID"], $json[$row["Product_ID"]]);
+                                $icount++;
+                            }
+                        }
+                    }
+                ?>
+                </div>
             </div>
-            <div id="main-discount-products" class="flex flex-col py-16 px-2 md:px-24">
+            <div id="main-discount-products" class="flex flex-col py-16 px-2 md:px-24 flex-grow">
                 <p class="text-4xl font-semibold pb-4 pl-2 md:pl-6 text-shadow-lg border-200-gray border-b-4">ON-SALE PRODUCTS<p>
             </div>
         </main>

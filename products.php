@@ -22,9 +22,8 @@ if (!$conn) {
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="js/dropdown-menu.js"></script>
-        <script src="js/card-behavior.js"></script>
-        <script src="js/carttest.js"></script>
+        <script src="js/dropdown-menu.js?v=<?php echo time(); ?>"></script>
+        <script src="js/card-behavior.js?v=<?php echo time(); ?>"></script>
 
     </head>
     <body class="flex flex-col">
@@ -60,8 +59,10 @@ if (!$conn) {
                 <br><br>
                 <input type="submit" class="mx-2 h-8 px-4 bg-black text-white font-bold rounded-lg" value="SUBMIT" name="submit" id="submit">
             </form>
-            <div class="flex flex-wrap flex-row">
+            <div class="flex flex-wrap flex-row justify-around md:justify-start space-y-2">
                 <?php 
+                $json = json_decode(file_get_contents("products.json"), true);
+
                 $category = isset($_POST['category']) ?$_POST['category'] : "All";
                 if($category != "All"){
                     $sql = "SELECT * FROM `inventory` WHERE Category = '$category';";
@@ -71,7 +72,7 @@ if (!$conn) {
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
-                        new Card($row["Name"], $row["Price"], $row["Product_ID"], "");
+                        new Card($row["Name"], $row["Price"], $row["Product_ID"], $json[$row["Product_ID"]]);
                     }
                 }
                 ?>
