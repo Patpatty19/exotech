@@ -72,7 +72,7 @@ if (!$conn) {
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
-                        new Card($row["Name"], $row["Price"], $row["Product_ID"], $json[$row["Product_ID"]]);
+                        new Card($row["Name"], $row["Price"], $row["Product_ID"], $json[$row["Product_ID"]] ?  $json[$row["Product_ID"]] : "https://image.flaticon.com/icons/png/512/984/984188.png");
                     }
                 }
                 ?>

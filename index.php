@@ -159,7 +159,7 @@
             <div id="main-recently-updated-products" class="flex flex-col py-16 px-2 md:px-24 flex-grow">
                 <p class="text-4xl font-semibold pb-4 pl-2 md:pl-6 text-shadow-lg border-200-gray border-b-4">RECENTLY UPDATED PRODUCTS<p>
                     
-                <div id="container-top-selling-products" class="flex  flex-grow md:flex-row justify-start md:justify-between my-2 p-2 min-h-36 max-h-36 w-full space-x-2">
+                <div id="container-recently-updated-products" class="flex  flex-grow md:flex-row justify-start md:justify-between my-2 p-2 min-h-36 max-h-36 w-full space-x-2">
                 <?php
                     $sql = "SELECT * FROM `inventory`";
                     $json = json_decode(file_get_contents("products.json"), true);
@@ -182,10 +182,28 @@
             </div>
             <div id="main-discount-products" class="flex flex-col py-16 px-2 md:px-24 flex-grow">
                 <p class="text-4xl font-semibold pb-4 pl-2 md:pl-6 text-shadow-lg border-200-gray border-b-4">ON-SALE PRODUCTS<p>
+                <div id="container-recently-updated-products" class="flex  flex-grow md:flex-row justify-start md:justify-between my-2 p-2 min-h-36 max-h-36 w-full space-x-2"><?php
+                    $sql = "SELECT * FROM `inventory`";
+                    $json = json_decode(file_get_contents("products.json"), true);
+                    $result = mysqli_query($conn, $sql);
+                    $count = 5;
+                    $icount = 0;
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)) {
+                            if ($row["Product_ID"]%8 == 1) {
+                                if ($icount > $count) break;
+                                
+                                new Card($row["Name"], $row["Price"], $row["Product_ID"], $json[$row["Product_ID"]]);
+                                $icount++;
+                            }
+                        }
+                    } ?>
+                </div>
             </div>
         </main>
         <footer>
-
+                    
         </footer>
         <script>
             controlCarousel(5000, ".carousel-inner")
