@@ -39,11 +39,11 @@ if (!$conn) {
             <p class="text-4xl font-semibold border-200-gray pb-2 mb-4 border-b-2">PRODUCTS<p>
             <form method="post" class="flex flex-row items-center" id="gen" name="gen" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <p class="text-center items-middle flex flex-row justify-center font-bold">Filter:</p>
-                <select name="category" class="rounded-lg border-black font-bold border-2 mx-2 h-8" id="catergory">
+                <select name="category" class="rounded-lg border-black font-bold border-2 mx-2 h-8" id="category">
                     <option value="All">All</option>
                     <option value="Processor">Processor</option>
                     <option value="RAM">RAM</option>
-                    <option value="Motherboard">motherboard</option>
+                    <option value="Motherboard">Motherboard</option>
                     <option value="SSD">SSD</option>
                     <option value="HDD">HDD</option>
                     <option value="PSU">PSU</option>
@@ -55,6 +55,7 @@ if (!$conn) {
                     <option value="Headset">Headset</option>
                     <option value="Smartphone">Smartphone</option>
                     <option value="Camera">Camera</option>
+                    <option value="GPU">GPU</option>
                 </select>
                 <br><br>
                 <input type="submit" class="mx-2 h-8 px-4 bg-black text-white font-bold rounded-lg" value="SUBMIT" name="submit" id="submit">
