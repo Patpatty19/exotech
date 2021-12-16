@@ -77,8 +77,19 @@
                 </div>
             </div>   
             </main>
-        <footer>
-
+        <footer class="footer-bg px-64 flex flex-row py-8 justify-center items-center">
+            <div class="flex flex-col flex-grow justify-center items-center">
+                <p class="text-white font-semiboldbold">EXOTECH Philippines Co.<p>
+                <p class="text-white font-semibold">000 Sample Street, Manila<p>
+            </div>
+            <div class="flex flex-col flex-grow justify-center items-center">
+                <p class="text-white font-semibold">exotech.info@gmail.com<p>
+                <p class="text-white font-semibold">+63 912 345 6789<p>
+            </div>
+            <div class="flex flex-col flex-grow justify-center items-center">
+                <p class="text-white font-semibold">Created with PHP and Tailwind<p>
+                <p class="text-white font-semibold">Cloalupat LTD.<p>
+            </div>
         </footer>
     </body>
 </html>

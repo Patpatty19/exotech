@@ -14,7 +14,7 @@
                             <a href="cart.php"><p class="my-2 border-b-2 border-200-gray mobile-button">Cart</p></a>
                         </div>
                     </a>
-                    <div class="flex flex-row space-x-6 hidden sm:hidden md:flex z-50">
+                    <div class="flex flex-row space-x-2 lg:space-x-6 hidden sm:hidden md:flex z-50">
                         <a href="index.php"><p class="font-semibold p-4 text-2xl text-white desktop-menu-hover mx-4">HOME</p></a>
                         <a href="products.php"><p class="font-semibold p-4 text-2xl text-white desktop-menu-hover mx-4">PRODUCTS</p></a>
                         <a href="builder.php"><p class="font-semibold p-4 text-2xl text-white desktop-menu-hover mx-4">BUILDER</p></a>
