@@ -28,6 +28,11 @@ if (!$conn) {
         <script src="js/dropdown-menu.js"></script>
         <script src="js/card-behavior.js"></script>
         <script src="js/builder-price.js?v=<?php echo time(); ?>"></script>
+        <script>
+            if ( window.history.replaceState ) {
+                window.history.replaceState( null, null, window.location.href );
+            }
+        </script>
     </head>
     <body class="flex flex-col">
         <header class="z-50">
@@ -185,9 +190,13 @@ if (!$conn) {
                 <div class="mt-4 border-t-2 px-4 py-2 border-black pt-2 flex flex-row items-center">
                     <p class="flex-grow font-bold">TOTAL PRICE:</p>
                     <p class="text-2xl font-bold" id="total-price">USD 0.00</p>
+                    <button type="submit" class="text-xl rounded-3xl bg-black p-2 px-6 text-white font-bold ml-6">Add Items to Cart</button>
                 </div>
             </form>
         </main>
+        <?php 
+            include("phpClass/builderForm.php");
+        ?>
         <footer class="footer-bg mt-8 px-64 flex flex-row py-8 justify-center items-center">
             <div class="flex flex-col flex-grow justify-center items-center">
                 <p class="text-white font-semiboldbold">EXOTECH Philippines Co.<p>

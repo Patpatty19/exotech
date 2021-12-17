@@ -20,7 +20,6 @@ $(document).ready(() => {
     $("select").on('change', e => {
         $json = JSON.parse(e.target.value);
         
-        console.log(e.target.name)
         $("#" + e.target.name + "-price").text("USD " + Number($json['price']).toFixed(2));
         $("#" + e.target.name + "-price").attr("value", $json["price"]);
         computePrice();
