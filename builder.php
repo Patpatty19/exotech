@@ -174,7 +174,7 @@ if (!$conn) {
                         <select name="psu" class="mx-6 p-2 flex-grow">
                             <option value='{"id": 0, "price": 0}'>None</option>
                             <?php 
-                                $sql = "SELECT * FROM `inventory`WHERE Category = 'Cooling';";
+                                $sql = "SELECT * FROM `inventory`WHERE Category = 'PSU';";
                                 $result = mysqli_query($conn, $sql);
 
                                 if (mysqli_num_rows($result) > 0) {
